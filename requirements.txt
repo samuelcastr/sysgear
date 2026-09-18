@@ -1,0 +1,21 @@
+# gearctl — dependencias base (multiplataforma: Linux y Windows)
+# Interfaz
+PySide6>=6.6
+
+# Detección y comunicación USB/HID
+pyusb>=1.2
+hidapi>=0.14
+
+# RGB genérico vía OpenRGB
+openrgb-python>=0.3
+
+# Linux: detección hotplug por netlink (opcional, recomendado)
+pyudev>=0.24 ; sys_platform == "linux"
+
+# SDK de fabricante (opcionales): se degrada a fallback si no están
+dbus-python>=1.3 ; sys_platform == "linux"   # OpenRazer
+lghub ; sys_platform != "linux"              # Logitech G HUB SDK (no oficial)
+cue_sdk ; sys_platform == "win32"            # Corsair iCUE SDK (no oficial)
+
+# Herramienta de empaquetado (fuera de runtime)
+pyinstaller>=6.0

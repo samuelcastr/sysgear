@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+# Entornos virtuales
+.venv/
+venv/
+# PyInstaller
+dist/
+build/
+*.spec
+# Config local / secretos
+.env
+*.log
+# SO / editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
