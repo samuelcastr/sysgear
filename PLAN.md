@@ -11,10 +11,10 @@
 **Objetivo:** que mover un ajuste en la GUI cambie algo físico en el dispositivo.
 **Sin esto, todo lo demás es decoración.**
 
-- [ ] 1.1 DPI / sensibilidad: leer y fijar DPI por niveles (mínimo vía OpenRazer D-Bus: `getDPI`/`setDPI`; hidapi raw para genéricos documentados).
-- [ ] 1.2 Polling rate: lectura/escritura donde el SDK lo exponga.
+- [x] 1.1 DPI / sensibilidad: leer y fijar DPI por niveles (vía `RatbagDriver` D-Bus contra `ratbagd`; verificado en Logitech G203 046d:c092).
+- [x] 1.2 Polling rate: lectura/escritura (verificado 1000→500→1000Hz en G203).
 - [ ] 1.3 Reasignación de botones: mapear botones del mouse a teclas/acciones.
-- [ ] 1.4 Prueba física obligatoria: cada ajuste se valida contra hardware real (no mocks).
+- [x] 1.4 Prueba física obligatoria: cada ajuste se valida contra hardware real (no mocks).
 - [ ] 1.5 Tabla de verdad por modelo: qué ajuste funciona en qué VID:PID (matriz de capacidades reales, no declaradas).
 
 **Criterio de salida:** cambiar DPI desde la GUI y verificarlo en el SO/juego.
